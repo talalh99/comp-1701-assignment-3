@@ -11,6 +11,24 @@ def read_file():
     except Exception as e:
         print(f"There was an error reading the file. Please try again!")
 
+## count() prints the amount of rows in the current table
+def count(table:list) -> str:
+    num_of_rows = str(len(table)-1) + " rows in the table."
+    return num_of_rows
+
+## print_columns() prints the names of each column within the current table
+def print_columns(table:list):
+    names = ''
+    print("Columns\n-------")
+    if table == []:
+        names = 'No data found.'
+        return names
+    i = 0
+    while i < len(table[0]):
+        print(table[0][i])
+        i+=1
+    print("-------")
+
 # To use the function:
 # read_file()
 
